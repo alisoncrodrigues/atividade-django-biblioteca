@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+</head>
+
+<body>
+    <div class=" pagina-secundaria">
+        <img src="{% static 'img/logo1.png' %}" alt="Logo Biblioteca">
+
+        <h1>Cadastro de Usuário</h1>
+
+        <p>
+            Bem-vindo à página de cadastro da Biblioteca!
+        </p>
+        <input name="nome" id="nome" type="text" placeholder="Insira seu nome Completo" autocomplete="True"
+            title="Nome do Aluno" alt="Nome do aluno para cadastro." required><br>
+        <input name="matricula" id="matricula" type="text" placeholder="Insira sua matrícula" autocomplete="True"
+            title="Matrícula do Usuário" alt="Matrícula do usuário para cadastro" required><br>
+
+        <input name="datanascimento" id="datanascimento" type="date" placeholder="Insira sua data de nascimento" autocomplete="bday"
+            title="Data de Nascimento" alt="Data de nascimento do usuário" required><br>
+
+        <input name="senha" id="senha" type="password" placeholder="Insira sua senha" autocomplete="false"
+            title="Senha do Usuário" alt="Senha do usuário para cadastro" required><br
+ 
+	    <h2><a href="{% url 'login' %}">Voltar para Login</a></h2>
+
+    </div>
+
+    <footer>
+        <p>Desenvolvido por Alison Rodrigues </p>   
+    </footer>   
+</body>
+
+</html>
